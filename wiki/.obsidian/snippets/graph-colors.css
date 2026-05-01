@@ -1,0 +1,4 @@
+/* Disable focused node color override — more neutral than default */
+.graph-view.color-fill-focused {
+  color: transparent !important;
+}

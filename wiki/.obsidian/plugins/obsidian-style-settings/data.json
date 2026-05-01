@@ -1,0 +1,11 @@
+{
+  "minimal-style@@minimal-code-scroll": false,
+  "minimal-style@@sidebar-tabs-style": "sidebar-tabs-default",
+  "minimal-style@@hide-help": false,
+  "minimal-style@@hide-settings": false,
+  "minimal-style@@bold-modifier": 200,
+  "minimal-style@@p-spacing": "1.5rem",
+  "minimal-style@@bold-color@@dark": "#ADADAD",
+  "minimal-advanced@@cursor": "default",
+  "graph-banner@@banner-height": "37vh"
+}

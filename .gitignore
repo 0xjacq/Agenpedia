@@ -11,9 +11,16 @@ Thumbs.db
 .opencode/
 .codex/
 
-# Obsidian workspace files
+# Obsidian workspace files (personal, not shared)
 wiki/.obsidian/workspace.json
 wiki/.obsidian/workspace-mobile.json
+
+# Obsidian plugin binaries (downloaded via scripts/setup-obsidian.sh)
+wiki/.obsidian/plugins/*/main.js
+wiki/.obsidian/plugins/*/styles.css
+
+# Obsidian theme files (install via Obsidian Settings → Appearance → Browse)
+wiki/.obsidian/themes/
 
 # Swap files
 *.swp

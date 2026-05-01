@@ -1,0 +1,14 @@
+{
+  "theme": "system",
+  "cssTheme": "Minimal",
+  "translucency": false,
+  "baseFontSizeAction": false,
+  "showRibbon": true,
+  "showViewHeader": true,
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "hide-scroll-bar",
+    "justify"
+  ],
+  "baseFontSize": 17
+}

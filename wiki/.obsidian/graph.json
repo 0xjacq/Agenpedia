@@ -1,0 +1,44 @@
+{
+  "collapse-filter": false,
+  "search": "-file:index -file:log",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "[\"type\":synthesis]",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "[\"type\":entity]",
+      "color": {
+        "a": 1,
+        "rgb": 7457908
+      }
+    },
+    {
+      "query": "[\"type\":concept]",
+      "color": {
+        "a": 1,
+        "rgb": 15745602
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.508203125,
+  "repelStrength": 10.9973958333333,
+  "linkStrength": 0.499869791666667,
+  "linkDistance": 351,
+  "scale": 0.7631428283688853,
+  "close": false
+}
