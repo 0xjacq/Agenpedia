@@ -69,6 +69,8 @@ Skills are hosted at [0xjacq/skills](https://github.com/0xjacq/skills).
 
 ![Obsidian preview — graph banner + color-coded knowledge graph](docs/obsidian-preview.png)
 
+![Obsidian graph view — full knowledge graph color-coded by page type](docs/obsidian-graph.png)
+
 The repo ships a pre-configured Obsidian vault in `wiki/.obsidian/`:
 
 - **Theme**: Minimal (install from Obsidian → Settings → Appearance → Browse)
