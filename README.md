@@ -73,17 +73,17 @@ Skills are hosted at [0xjacq/skills](https://github.com/0xjacq/skills).
 
 The repo ships a pre-configured Obsidian vault in `wiki/.obsidian/`:
 
-- **Theme**: Minimal (install from Obsidian → Settings → Appearance → Browse)
+- **Theme**: Minimal
 - **Graph**: color-coded by page type — entity / concept / synthesis — with `index` and `log` filtered out
 - **Plugins**: Dataview, Minimal Theme Settings, Style Settings, Graph Banner, Sync Graph Settings
 
-Plugin binaries are not committed to git. Install them with:
+Plugin binaries and theme assets are not committed to git. Install them with:
 
 ```bash
 ./scripts/setup-obsidian.sh   # requires curl + jq
 ```
 
-Then open `wiki/` as a vault in Obsidian, enable community plugins, and install the Minimal theme from the theme browser.
+Then open `wiki/` as a vault in Obsidian and enable community plugins. The script also installs the Minimal theme into the vault, so you only need to select it in Obsidian if it is not already active.
 
 If you prefer your own Obsidian setup, simply delete or ignore `wiki/.obsidian/` — the wiki works as plain markdown regardless.
 
