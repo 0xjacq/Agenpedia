@@ -1,0 +1,809 @@
+/*
+  Tufte Global Obsidian CSS Snippet
+  File: tufte-obsidian-global-soft-links.css
+
+  No frontmatter required.
+  Applies globally to all Markdown notes in:
+  - Reading View
+  - Live Preview / Editing View
+
+  Changes in this version:
+  - Hyperlinks are more visible by default.
+  - Internal links and external links get a clearer accent treatment.
+  - Bold text is softer: semi-bold, slightly muted, not overly heavy.
+*/
+
+/* =========================================================
+   Typography base
+   ========================================================= */
+
+/* Fond beige papier + texte brun */
+.markdown-preview-view,
+.markdown-rendered,
+.markdown-source-view.mod-cm6 {
+  --tufte-paper-bg: #e9dfc8;
+  --tufte-paper-text: #4a3328;
+  --tufte-paper-muted: #7a6654;
+  --tufte-paper-code-bg: #ded2b9;
+  --tufte-paper-link: #7a4d2f;
+
+  background: var(--tufte-paper-bg) !important;
+  color: var(--tufte-paper-text) !important;
+}
+
+/* Appliquer le fond aussi dans le contenu */
+.markdown-preview-view .markdown-preview-sizer,
+.markdown-rendered,
+.markdown-source-view.mod-cm6 .cm-contentContainer,
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-source-view.mod-cm6 .cm-content {
+  background: var(--tufte-paper-bg) !important;
+}
+
+/* Texte normal moins gras */
+.markdown-preview-view p,
+.markdown-rendered p,
+.markdown-preview-view li,
+.markdown-rendered li,
+.markdown-source-view.mod-cm6 .cm-line {
+  color: var(--tufte-paper-text) !important;
+  font-weight: 400 !important;
+}
+
+/* Liens intégrés au style papier */
+.markdown-preview-view a,
+.markdown-rendered a,
+.markdown-preview-view .internal-link,
+.markdown-rendered .internal-link,
+.markdown-source-view.mod-cm6 .cm-link,
+.markdown-source-view.mod-cm6 .cm-url,
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link {
+  color: var(--tufte-paper-link) !important;
+  font-weight: 500;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1.4px;
+  text-decoration-color: color-mix(in srgb, var(--tufte-paper-link), transparent 35%);
+  text-underline-offset: 0.18em;
+}
+
+/* Petit fond discret derrière les liens en Reading View */
+.markdown-preview-view a,
+.markdown-rendered a,
+.markdown-preview-view .internal-link,
+.markdown-rendered .internal-link {
+  background-color: color-mix(in srgb, var(--tufte-paper-link), transparent 92%);
+  border-radius: 0.16em;
+  padding: 0 0.08em;
+}
+
+/* Inline code couleur papier plus sombre */
+.markdown-preview-view code:not(pre code),
+.markdown-rendered code:not(pre code),
+.markdown-source-view.mod-cm6 .cm-inline-code {
+  color: var(--tufte-paper-text) !important;
+  background: var(--tufte-paper-code-bg) !important;
+  font-weight: 400 !important;
+}
+
+.markdown-preview-view,
+.markdown-rendered,
+.markdown-source-view.mod-cm6 {
+  font-family: Charter, "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-normal);
+}
+
+/* Live Preview editor text */
+.markdown-source-view.mod-cm6 .cm-content {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   Layout
+   ========================================================= */
+
+/* Reading View */
+.markdown-preview-view .markdown-preview-sizer,
+.markdown-rendered {
+  max-width: 55rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 4rem;
+}
+
+/* Live Preview */
+.markdown-source-view.mod-cm6 .cm-content {
+  max-width: 55rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 4rem;
+}
+
+/* Keep editor lines within readable width */
+.markdown-source-view.mod-cm6 .cm-line {
+  max-width: 55rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   Headings - Reading View
+   ========================================================= */
+
+.markdown-preview-view h1,
+.markdown-rendered h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.markdown-preview-view h2,
+.markdown-rendered h2 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.markdown-preview-view h2::after,
+.markdown-rendered h2::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2px;
+  background: color-mix(in srgb, var(--text-muted), transparent 60%);
+  margin: 0.75rem auto 0;
+}
+
+.markdown-preview-view h3,
+.markdown-rendered h3 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-preview-view h4,
+.markdown-rendered h4 {
+  font-weight: 400;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* =========================================================
+   Headings - Live Preview
+   ========================================================= */
+
+.markdown-source-view.mod-cm6 .HyperMD-header-1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-header-2 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-header-3 {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-header-4 {
+  font-weight: 400;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* =========================================================
+   Body text
+   ========================================================= */
+
+.markdown-preview-view p,
+.markdown-rendered p {
+  margin-top: 0;
+  margin-bottom: 1.1rem;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* =========================================================
+   Blockquotes
+   ========================================================= */
+
+.markdown-preview-view blockquote,
+.markdown-rendered blockquote {
+  font-style: italic;
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid color-mix(in srgb, var(--text-muted), transparent 70%);
+}
+
+.markdown-source-view.mod-cm6 .HyperMD-quote {
+  font-style: italic;
+  border-left: 3px solid color-mix(in srgb, var(--text-muted), transparent 70%);
+  padding-left: 1.5rem;
+}
+
+/* =========================================================
+   Lists
+   ========================================================= */
+
+.markdown-preview-view ul,
+.markdown-preview-view ol,
+.markdown-rendered ul,
+.markdown-rendered ol {
+  margin: 1.1rem 0;
+  padding-left: 1.5rem;
+  list-style-position: outside;
+}
+
+.markdown-preview-view ul,
+.markdown-rendered ul {
+  list-style-type: disc;
+}
+
+.markdown-preview-view ol,
+.markdown-rendered ol {
+  list-style-type: decimal;
+}
+
+.markdown-preview-view li,
+.markdown-rendered li {
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   Links - more visible by default
+   ========================================================= */
+
+/*
+  These values deliberately use Obsidian theme variables so the snippet
+  remains compatible with dark and light themes.
+*/
+
+.markdown-preview-view a,
+.markdown-rendered a,
+.markdown-preview-view .internal-link,
+.markdown-rendered .internal-link {
+  color: var(--text-accent);
+  font-weight: 500;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: color-mix(in srgb, var(--text-accent), transparent 35%);
+  text-underline-offset: 0.18em;
+  transition:
+    color 0.15s ease,
+    text-decoration-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+/* Subtle readable highlight behind links */
+.markdown-preview-view a:not(.tag),
+.markdown-rendered a:not(.tag),
+.markdown-preview-view .internal-link,
+.markdown-rendered .internal-link {
+
+  padding: 0 0.08em;
+}
+
+/* Hover: clearer but not neon */
+.markdown-preview-view a:hover,
+.markdown-rendered a:hover,
+.markdown-preview-view .internal-link:hover,
+.markdown-rendered .internal-link:hover {
+  color: var(--text-accent-hover);
+  text-decoration-color: var(--text-accent-hover);
+  background-color: color-mix(in srgb, var(--text-accent), transparent 84%);
+}
+
+/* External links: slightly stronger underline */
+.markdown-preview-view a.external-link,
+.markdown-rendered a.external-link {
+  text-decoration-style: solid;
+}
+
+/* Unresolved internal links: visible but less assertive */
+.markdown-preview-view .internal-link.is-unresolved,
+.markdown-rendered .internal-link.is-unresolved {
+  color: color-mix(in srgb, var(--text-accent), var(--text-muted) 35%);
+  text-decoration-style: dashed;
+  background-color: color-mix(in srgb, var(--text-accent), transparent 94%);
+}
+
+/* Live Preview links */
+.markdown-source-view.mod-cm6 .cm-link,
+.markdown-source-view.mod-cm6 .cm-url,
+.markdown-source-view.mod-cm6 .cm-hmd-internal-link,
+.markdown-source-view.mod-cm6 .cm-link .cm-underline,
+.markdown-source-view.mod-cm6 .cm-url .cm-underline {
+  color: var(--text-accent);
+  font-weight: 500;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: color-mix(in srgb, var(--text-accent), transparent 35%);
+  text-underline-offset: 0.18em;
+}
+
+/* Make wiki-link brackets and markdown syntax less dominant */
+.markdown-source-view.mod-cm6 .cm-formatting-link,
+.markdown-source-view.mod-cm6 .cm-formatting-link-string {
+  color: color-mix(in srgb, var(--text-muted), transparent 10%);
+  font-weight: 400;
+}
+
+/* =========================================================
+   Horizontal rule
+   ========================================================= */
+
+.markdown-preview-view hr,
+.markdown-rendered hr {
+  border: none;
+  height: 1px;
+  background: color-mix(in srgb, var(--text-muted), transparent 70%);
+  margin: 2.5rem auto;
+  width: 40%;
+}
+
+/* =========================================================
+   Tables
+   ========================================================= */
+
+.markdown-preview-view table,
+.markdown-rendered table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+.markdown-preview-view th,
+.markdown-rendered th {
+  text-align: left;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid color-mix(in srgb, var(--text-muted), transparent 70%);
+  font-weight: 600;
+}
+
+.markdown-preview-view td,
+.markdown-rendered td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--text-muted), transparent 85%);
+}
+
+/* =========================================================
+   Code
+   ========================================================= */
+
+.markdown-preview-view code:not(pre code),
+.markdown-rendered code:not(pre code),
+.markdown-source-view.mod-cm6 .cm-inline-code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.85em;
+  background: color-mix(in srgb, var(--background-secondary), transparent 50%);
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+}
+
+.markdown-preview-view pre,
+.markdown-rendered pre {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.markdown-preview-view pre code,
+.markdown-rendered pre code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* =========================================================
+   Media
+   ========================================================= */
+
+.markdown-preview-view img,
+.markdown-rendered img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================================
+   Inline formatting - softer bold
+   ========================================================= */
+
+/*
+  Georgia bold can look heavy in dark mode.
+  This uses semi-bold where available, with a slightly muted foreground.
+*/
+
+
+
+/* =========================================================
+   Mobile / narrow panes
+   ========================================================= */
+
+@media (max-width: 760px) {
+  .markdown-preview-view .markdown-preview-sizer,
+  .markdown-rendered,
+  .markdown-source-view.mod-cm6 .cm-content {
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* =========================================================
+   Fallback for older Obsidian / older Chromium CSS engines
+   ========================================================= */
+
+@supports not (background: color-mix(in srgb, black, white)) {
+  .markdown-preview-view h2::after,
+  .markdown-rendered h2::after {
+    background: var(--text-muted);
+    opacity: 0.4;
+  }
+
+  .markdown-preview-view blockquote,
+  .markdown-rendered blockquote,
+  .markdown-source-view.mod-cm6 .HyperMD-quote {
+    border-left-color: var(--text-muted);
+  }
+
+  .markdown-preview-view hr,
+  .markdown-rendered hr {
+    background: var(--text-muted);
+    opacity: 0.4;
+  }
+
+  .markdown-preview-view code:not(pre code),
+  .markdown-rendered code:not(pre code),
+  .markdown-source-view.mod-cm6 .cm-inline-code {
+    background: var(--background-secondary);
+  }
+
+  .markdown-preview-view a,
+  .markdown-rendered a,
+  .markdown-preview-view .internal-link,
+  .markdown-rendered .internal-link,
+  .markdown-source-view.mod-cm6 .cm-link,
+  .markdown-source-view.mod-cm6 .cm-url,
+  .markdown-source-view.mod-cm6 .cm-hmd-internal-link {
+    color: var(--text-accent);
+    text-decoration-color: var(--text-accent);
+  }
+
+  .markdown-preview-view a:not(.tag),
+  .markdown-rendered a:not(.tag),
+  .markdown-preview-view .internal-link,
+  .markdown-rendered .internal-link {
+    background-color: transparent;
+  }
+
+  .markdown-preview-view strong,
+  .markdown-rendered strong,
+  .markdown-source-view.mod-cm6 .cm-strong {
+    font-weight: 600;
+    color: var(--text-normal);
+  }
+
+  
+}
+
+/* =========================================================
+   Fond papier sur les marges de lecture + fond du graphe
+   ========================================================= */
+
+.markdown-preview-view,
+.markdown-rendered,
+.markdown-reading-view,
+.markdown-preview-section,
+.view-content {
+  background: #e9dfc8 !important;
+}
+
+/* Zone autour de la page en Reading View */
+.workspace-leaf-content[data-type="markdown"] .view-content {
+  background: #e9dfc8 !important;
+}
+
+/* Fond du graph embedded dans la note */
+.markdown-preview-view .graph-view,
+.markdown-rendered .graph-view,
+.markdown-preview-view .internal-embed.graph-view,
+.markdown-rendered .internal-embed.graph-view,
+.markdown-preview-view .graph-view-container,
+.markdown-rendered .graph-view-container,
+.markdown-preview-view .graph-view-placeholder,
+.markdown-rendered .graph-view-placeholder,
+.markdown-preview-view .graph-view canvas,
+.markdown-rendered .graph-view canvas {
+  background: #252a32 !important;
+}
+
+/* Tableaux : textes, bordures, headers en sépia */
+.markdown-preview-view table,
+.markdown-rendered table {
+  color: var(--tufte-paper-text) !important;
+  border-color: var(--tufte-paper-border) !important;
+}
+
+.markdown-preview-view th,
+.markdown-rendered th {
+  color: var(--tufte-paper-muted) !important;
+  border-bottom: 2px solid var(--tufte-paper-border) !important;
+  background: transparent !important;
+}
+
+.markdown-preview-view td,
+.markdown-rendered td {
+  color: var(--tufte-paper-text) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--tufte-paper-border), transparent 35%) !important;
+  background: transparent !important;
+}
+
+/* Trait vertical / séparateurs de tableau */
+.markdown-preview-view table,
+.markdown-rendered table,
+.markdown-preview-view table *,
+.markdown-rendered table * {
+  border-color: var(--tufte-paper-border) !important;
+}
+
+/* HR et petits traits sous H2 */
+.markdown-preview-view hr,
+.markdown-rendered hr,
+.markdown-preview-view h2::after,
+.markdown-rendered h2::after {
+  background: var(--tufte-paper-border) !important;
+  border-color: var(--tufte-paper-border) !important;
+}
+
+/* Graph embedded : textes moins blancs/bleus */
+.markdown-preview-view .graph-view,
+.markdown-rendered .graph-view,
+.markdown-preview-view .graph-view-container,
+.markdown-rendered .graph-view-container,
+.markdown-preview-view .internal-embed.graph-view,
+.markdown-rendered .internal-embed.graph-view {
+  background: var(--tufte-paper-bg) !important;
+  color: var(--tufte-paper-muted) !important;
+}
+
+/* Labels du graphe */
+.markdown-preview-view .graph-view text,
+.markdown-rendered .graph-view text,
+.markdown-preview-view .graph-view .graph-view-label,
+.markdown-rendered .graph-view .graph-view-label {
+  fill: var(--tufte-paper-muted) !important;
+  color: var(--tufte-paper-muted) !important;
+}
+
+/* Lignes du graphe */
+.markdown-preview-view .graph-view line,
+.markdown-rendered .graph-view line,
+.markdown-preview-view .graph-view path,
+.markdown-rendered .graph-view path {
+  stroke: color-mix(in srgb, var(--tufte-paper-text), transparent 45%) !important;
+}
+
+/* Si Obsidian rend le graphe en canvas, ceci aide au moins le conteneur */
+.markdown-preview-view .graph-view canvas,
+.markdown-rendered .graph-view canvas {
+  background: var(--tufte-paper-bg) !important;
+}
+
+/* =========================================================
+   Fix textes gris/bleutés dans Reading View, Properties, Graph labels
+   À mettre tout à la fin du snippet
+   ========================================================= */
+
+.workspace-leaf-content[data-type="markdown"],
+.workspace-leaf-content[data-type="markdown"] .view-content,
+.markdown-preview-view,
+.markdown-rendered,
+.markdown-source-view.mod-cm6 {
+  --text-normal: #4a3328 !important;
+  --text-muted: #7a6654 !important;
+  --text-faint: #9a8569 !important;
+  --text-accent: #8a5837 !important;
+  --text-accent-hover: #5a3825 !important;
+
+  --metadata-label-text-color: #7a6654 !important;
+  --metadata-input-text-color: #4a3328 !important;
+  --metadata-property-background: transparent !important;
+  --metadata-property-background-hover: rgba(74, 51, 40, 0.06) !important;
+
+  color: #4a3328 !important;
+}
+
+/* Texte général encore trop pâle */
+.markdown-preview-view *,
+.markdown-rendered *,
+.markdown-source-view.mod-cm6 .cm-line {
+  color: inherit;
+}
+
+/* Properties / Metadata */
+.metadata-container,
+.metadata-content,
+.metadata-property,
+.metadata-property *,
+.metadata-property-key,
+.metadata-property-key-input,
+.metadata-property-value,
+.metadata-property-value *,
+.metadata-input,
+.metadata-input-longtext,
+.metadata-link,
+.metadata-link-inner,
+.multi-select-pill,
+.multi-select-pill-content,
+.multi-select-pill-remove-button,
+.metadata-add-button,
+.metadata-properties-heading {
+  color: #4a3328 !important;
+  opacity: 1 !important;
+}
+
+/* Labels de propriétés : un peu plus doux que le texte principal */
+.metadata-property-key,
+.metadata-property-key-input,
+.metadata-property-icon,
+.metadata-add-button,
+.metadata-properties-heading {
+  color: #7a6654 !important;
+}
+
+/* Valeurs de propriétés */
+.metadata-property-value,
+.metadata-property-value input,
+.metadata-property-value textarea,
+.metadata-input,
+.metadata-input-longtext {
+  color: #4a3328 !important;
+  -webkit-text-fill-color: #4a3328 !important;
+}
+
+/* Tags / pills dans les propriétés */
+.multi-select-pill {
+  color: #4a3328 !important;
+  background: rgba(138, 88, 55, 0.10) !important;
+  border: 1px solid rgba(74, 51, 40, 0.55) !important;
+}
+
+.multi-select-pill-content {
+  color: #4a3328 !important;
+}
+
+.multi-select-pill-remove-button {
+  color: #7a6654 !important;
+}
+
+/* Liens dans les propriétés */
+.metadata-container a,
+.metadata-container .internal-link,
+.metadata-container .metadata-link,
+.metadata-container .metadata-link-inner {
+  color: #8a5837 !important;
+  -webkit-text-fill-color: #8a5837 !important;
+  text-decoration-color: rgba(138, 88, 55, 0.65) !important;
+}
+
+/* Icônes des propriétés */
+.metadata-property-icon,
+.metadata-property-icon svg,
+.metadata-container svg {
+  color: #7a6654 !important;
+  stroke: #7a6654 !important;
+  opacity: 1 !important;
+}
+
+/* Placeholder / texte fantôme */
+.metadata-container input::placeholder,
+.metadata-container textarea::placeholder,
+.markdown-source-view.mod-cm6 input::placeholder {
+  color: #9a8569 !important;
+  opacity: 1 !important;
+}
+
+/* =========================================================
+   Graph embedded : textes/labels plus lisibles
+   ========================================================= */
+
+.markdown-preview-view .graph-view,
+.markdown-rendered .graph-view,
+.markdown-preview-view .internal-embed.graph-view,
+.markdown-rendered .internal-embed.graph-view,
+.markdown-preview-view .graph-view-container,
+.markdown-rendered .graph-view-container {
+  color: #4a3328 !important;
+  --text-normal: #4a3328 !important;
+  --text-muted: #7a6654 !important;
+  --text-faint: #9a8569 !important;
+}
+
+/* Pour les éléments SVG, si présents */
+.markdown-preview-view .graph-view text,
+.markdown-rendered .graph-view text,
+.markdown-preview-view .graph-view .graph-view-label,
+.markdown-rendered .graph-view .graph-view-label {
+  fill: #4a3328 !important;
+  color: #4a3328 !important;
+  opacity: 1 !important;
+}
+
+/* Bouton réglages du graphe */
+.markdown-preview-view .graph-view .clickable-icon,
+.markdown-rendered .graph-view .clickable-icon {
+  color: #7a6654 !important;
+  background: rgba(74, 51, 40, 0.08) !important;
+}
+
+/* =========================================================
+   Fix couleurs Graph View en mode papier
+   ========================================================= */
+
+.graph-view,
+.workspace-leaf-content[data-type="graph"] .graph-view,
+.workspace-leaf-content[data-type="localgraph"] .graph-view,
+.markdown-preview-view .graph-view,
+.markdown-rendered .graph-view {
+  --graph-text: #4a3328 !important;
+  --graph-text-highlight: #2f211a !important;
+
+  --graph-line: rgba(74, 51, 40, 0.45) !important;
+  --graph-line-highlight: rgba(74, 51, 40, 0.75) !important;
+
+  --graph-node: #7a6654 !important;
+  --graph-node-focused: #4f79d8 !important;
+  --graph-node-tag: #8a5837 !important;
+  --graph-node-attachment: #9a8569 !important;
+  --graph-node-unresolved: #b8a783 !important;
+
+  background: #e9dfc8 !important;
+  color: #4a3328 !important;
+}
+
+/* Conteneurs du graphe */
+.graph-view-container,
+.graph-view-placeholder,
+.markdown-preview-view .graph-view-container,
+.markdown-rendered .graph-view-container {
+  background: #e9dfc8 !important;
+  color: #4a3328 !important;
+}
+
+/* Bouton réglages du graphe */
+.graph-view .clickable-icon,
+.graph-controls,
+.markdown-preview-view .graph-view .clickable-icon,
+.markdown-rendered .graph-view .clickable-icon {
+  color: #4a3328 !important;
+  background: rgba(74, 51, 40, 0.08) !important;
+}
+
+/* Hover du bouton */
+.graph-view .clickable-icon:hover,
+.graph-controls:hover {
+  color: #2f211a !important;
+  background: rgba(74, 51, 40, 0.14) !important;
+}

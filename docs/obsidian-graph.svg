@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1518" height="980" viewBox="0 0 1518 980" role="img" aria-labelledby="title desc">
+  <title id="title">Obsidian graph view with the updated Agenpedia theme</title>
+  <desc id="desc">A full graph screenshot illustration with a warm beige background, colored nodes by page type, and a highlighted central concept node.</desc>
+  <rect width="1518" height="980" fill="#e8dfc6"/>
+  <rect x="0" y="0" width="1518" height="76" fill="#d8c8a2" opacity="0.55"/>
+  <text x="84" y="48" font-family="ETBembo, Georgia, 'Times New Roman', serif" font-size="34" fill="#4a392f">Graph view -- Agenpedia / Tufte preset</text>
+
+  <g stroke="#6c5d53" stroke-width="1.2" opacity="0.78">
+    <line x1="772" y1="450" x2="470" y2="178"/>
+    <line x1="772" y1="450" x2="660" y2="120"/>
+    <line x1="772" y1="450" x2="842" y2="135"/>
+    <line x1="772" y1="450" x2="1048" y2="170"/>
+    <line x1="772" y1="450" x2="1160" y2="290"/>
+    <line x1="772" y1="450" x2="1175" y2="486"/>
+    <line x1="772" y1="450" x2="1051" y2="680"/>
+    <line x1="772" y1="450" x2="855" y2="806"/>
+    <line x1="772" y1="450" x2="645" y2="795"/>
+    <line x1="772" y1="450" x2="428" y2="706"/>
+    <line x1="772" y1="450" x2="332" y2="503"/>
+    <line x1="772" y1="450" x2="344" y2="304"/>
+    <line x1="772" y1="450" x2="607" y2="282"/>
+    <line x1="772" y1="450" x2="936" y2="300" stroke-dasharray="4 5"/>
+    <line x1="772" y1="450" x2="563" y2="622" stroke-dasharray="4 5"/>
+    <line x1="772" y1="450" x2="949" y2="582" stroke-dasharray="4 5"/>
+  </g>
+
+  <g font-family="ETBembo, Georgia, 'Times New Roman', serif" font-size="20" fill="#3e3028">
+    <circle cx="772" cy="450" r="30" fill="#3c2b24"/>
+    <text x="772" y="497" text-anchor="middle" font-size="34">negentropy</text>
+
+    <circle cx="470" cy="178" r="16" fill="#dd5340"/>
+    <text x="395" y="166">dissipative-structures</text>
+
+    <circle cx="660" cy="120" r="14" fill="#d8a73e"/>
+    <text x="571" y="104">maximum-entropy-production</text>
+
+    <circle cx="842" cy="135" r="14" fill="#8bb31e"/>
+    <text x="787" y="108">erwin-schrodinger</text>
+
+    <circle cx="1048" cy="170" r="15" fill="#dd5340"/>
+    <text x="1010" y="145">autopoiesis</text>
+
+    <circle cx="1160" cy="290" r="15" fill="#dd5340"/>
+    <text x="1075" y="322">free-energy-principle</text>
+
+    <circle cx="1175" cy="486" r="14" fill="#d8a73e"/>
+    <text x="1094" y="519">free-energy-principle-explained</text>
+
+    <circle cx="1051" cy="680" r="15" fill="#dd5340"/>
+    <text x="997" y="713">informational-realism</text>
+
+    <circle cx="855" cy="806" r="15" fill="#8bb31e"/>
+    <text x="812" y="842">knowledge graphs</text>
+
+    <circle cx="645" cy="795" r="15" fill="#8bb31e"/>
+    <text x="559" y="830">wikilink architecture</text>
+
+    <circle cx="428" cy="706" r="15" fill="#dd5340"/>
+    <text x="357" y="741">landauer-principle</text>
+
+    <circle cx="332" cy="503" r="14" fill="#d8a73e"/>
+    <text x="237" y="536">economy-as-thermodynamic-system</text>
+
+    <circle cx="344" cy="304" r="14" fill="#d8a73e"/>
+    <text x="222" y="337">information-entropy-convergence</text>
+
+    <circle cx="607" cy="282" r="14" fill="#d8a73e"/>
+    <text x="558" y="256">humans-as-thermodynamic-systems</text>
+
+    <circle cx="936" cy="300" r="14" fill="#8bb31e"/>
+    <text x="905" y="274">thorstein-veblen</text>
+
+    <circle cx="563" cy="622" r="14" fill="#dd5340"/>
+    <text x="548" y="655">homeostasis</text>
+
+    <circle cx="949" cy="582" r="14" fill="#dd5340"/>
+    <text x="900" y="615">computational-neuroscience</text>
+  </g>
+
+  <g transform="translate(1210 112)">
+    <rect width="228" height="180" rx="18" fill="#efe5cb" stroke="#c8b993"/>
+    <text x="28" y="42" font-family="ETBembo, Georgia, 'Times New Roman', serif" font-size="28" fill="#4b3a30">Node colors</text>
+    <circle cx="34" cy="78" r="10" fill="#8bb31e"/>
+    <text x="58" y="86" font-family="ETBembo, Georgia, 'Times New Roman', serif" font-size="22" fill="#4b3a30">entity</text>
+    <circle cx="34" cy="114" r="10" fill="#d8a73e"/>
+    <text x="58" y="122" font-family="ETBembo, Georgia, 'Times New Roman', serif" font-size="22" fill="#4b3a30">concept</text>
+    <circle cx="34" cy="150" r="10" fill="#dd5340"/>
+    <text x="58" y="158" font-family="ETBembo, Georgia, 'Times New Roman', serif" font-size="22" fill="#4b3a30">synthesis</text>
+  </g>
+</svg>

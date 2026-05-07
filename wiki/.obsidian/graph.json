@@ -1,5 +1,5 @@
 {
-  "collapse-filter": false,
+  "collapse-filter": true,
   "search": "-file:index -file:log",
   "showTags": false,
   "showAttachments": false,
@@ -15,30 +15,30 @@
       }
     },
     {
-      "query": "[\"type\":entity]",
-      "color": {
-        "a": 1,
-        "rgb": 7457908
-      }
-    },
-    {
       "query": "[\"type\":concept]",
       "color": {
         "a": 1,
         "rgb": 15745602
       }
+    },
+    {
+      "query": "[\"type\":entity]",
+      "color": {
+        "a": 1,
+        "rgb": 8040970
+      }
     }
   ],
-  "collapse-display": false,
+  "collapse-display": true,
   "showArrow": false,
-  "textFadeMultiplier": 0,
+  "textFadeMultiplier": 0.2,
   "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
+  "lineSizeMultiplier": 0.3851953125,
   "collapse-forces": false,
   "centerStrength": 0.508203125,
   "repelStrength": 10.9973958333333,
   "linkStrength": 0.499869791666667,
   "linkDistance": 351,
-  "scale": 0.7631428283688853,
-  "close": false
+  "scale": 0.9583976303922096,
+  "close": true
 }
