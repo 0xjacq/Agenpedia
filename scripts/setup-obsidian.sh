@@ -11,8 +11,8 @@ PLUGIN_DIR="$(git rev-parse --show-toplevel)/wiki/.obsidian/plugins"
 PLUGINS=(
   "dataview|blacksmithgu/obsidian-dataview"
   "obsidian-minimal-settings|kepano/obsidian-minimal-settings"
-  "obsidian-style-settings|mgmeyers/obsidian-style-settings"
-  "graph-banner|ras0q/graph-banner"
+  "obsidian-style-settings|obsidian-community/obsidian-style-settings"
+  "graph-banner|ras0q/obsidian-graph-banner"
   "sync-graph-settings|Xallt/sync-graph-settings"
 )
 
@@ -33,7 +33,7 @@ install_plugin() {
   echo "  → $id"
 
   local tag
-  tag=$(curl -sf "https://api.github.com/repos/$repo/releases/latest" | jq -r '.tag_name')
+  tag=$(curl -fsL "https://api.github.com/repos/$repo/releases/latest" | jq -r '.tag_name') || true
   if [ -z "$tag" ] || [ "$tag" = "null" ]; then
     echo "    Warning: no release found for $repo, skipping." >&2
     return
