@@ -4,5 +4,11 @@
   "propertiesInDocument": "hidden",
   "showInlineTitle": false,
   "spellcheck": false,
-  "focusNewTab": true
+  "focusNewTab": true,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showIndentGuide": true,
+  "showLineNumber": false
 }

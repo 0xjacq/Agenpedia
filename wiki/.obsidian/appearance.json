@@ -8,7 +8,9 @@
   "accentColor": "",
   "enabledCssSnippets": [
     "hide-scroll-bar",
-    "justify"
+    "justify",
+    "tufte-obsidian-simplified-fixed"
   ],
-  "baseFontSize": 17
+  "baseFontSize": 17,
+  "textFontFamily": "ETBembo"
 }
