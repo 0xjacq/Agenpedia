@@ -14,7 +14,7 @@ THEME_REPO="kepano/obsidian-minimal"
 PLUGINS=(
   "dataview|blacksmithgu/obsidian-dataview"
   "obsidian-minimal-settings|kepano/obsidian-minimal-settings"
-  "obsidian-style-settings|mgmeyers/obsidian-style-settings"
+  "obsidian-style-settings|obsidian-community/obsidian-style-settings"
   "graph-banner|ras0q/obsidian-graph-banner"
   "sync-graph-settings|Xallt/sync-graph-settings"
 )
